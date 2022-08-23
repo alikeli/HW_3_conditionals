@@ -14,6 +14,7 @@ public class Main {
 
         int clientOS1 = 0; // 0 — iOS, 1 — Android.
         int clientDeviceYear = 2017;
+
         if (clientOS1 == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         }else if (clientOS1 == 0 && clientDeviceYear > 2015) {
@@ -51,7 +52,7 @@ public class Main {
         }
 
         //Task 5
-        int monthNumber = 12;  //Номер месяца в году
+        int monthNumber = 13;  //Номер месяца в году
 
         switch (monthNumber) {
             case 1:
@@ -75,8 +76,31 @@ public class Main {
                 System.out.println("Осень");
                 break;
             default:
+                System.out.println("Не существует ");
                 break;
         }
+
+
+        //Task 6
+        int age = 24;
+        int salary = 90000;
+
+        if (age < 23  && salary <= 50000 ) {
+            System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + (salary*2) + " рублей");
+        } else if (age < 23  && salary >= 50000 && salary < 80000 ) {
+            System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + (salary * 2 * 1.2) + " рублей");
+        } else if (age < 23  && salary >= 80000) {
+                System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + (salary * 2 * 1.5) + " рублей");
+        } else if (age >= 23  && salary <= 50000 ) {
+            System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + (salary * 3) + " рублей");
+        } else if (age >= 23  && salary >= 50000 && salary < 80000 ) {
+            System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + (salary * 3 * 1.2) + " рублей");
+        } else if (age >= 23 && salary >= 80000 ) {
+            System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + (salary * 3 * 1.5) + " рублей");
+        }
+
+
+
 
   }
   }
